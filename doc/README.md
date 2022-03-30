@@ -1,5 +1,15 @@
 ```shell
 ln -s .env.example .env
+
+sudo docker-compose up marmot-mysql
+sudo docker-compose up -d marmot-mysql
+sudo docker-compose stop marmot-mysql
+sudo docker-compose rm marmot-mysql
+
+# 土拨鼠 marmot
+# 土拨鼠堡垒 marmot-fort
+# 基石 footstone
+# 门石 Gate Stone
 ```
 
 ```shell
