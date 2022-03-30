@@ -49,3 +49,59 @@ cd /opt/jumpserver-installer-v2.20.1
 /opt/jumpserver/config
 /opt/jumpserver
 ```
+
+```
+docker exec -it jms_core /bin/bash
+cd /opt/jumpserver/apps
+python manage.py shell
+from users.models import User
+u = User.objects.get(username='admin')
+u.create_private_token()
+
+u.private_token
+
+curl -H 'Authorization: Token 937b38011acf499eb474e2fecb424ab3' \
+     -H "Content-Type:application/json" http://demo.jumpserver.org/api/v1/users/users/
+     
+# pip install requests
+import requests, json
+
+jms_url   = 'https://demo.jumpserver.org'
+jms_token = '937b38011acf499eb474e2fecb424ab3'
+
+def get_user_info():
+    url      = jms_url + '/api/v1/users/users/'
+    headers  = { "Authorization": 'Token ' + jms_token }
+    response = requests.get(url, headers=headers)
+    print(json.loads(response.text))
+
+get_user_info()
+
+
+# pip install requests drf-httpsig
+import requests, datetime, json
+from httpsig.requests_auth import HTTPSignatureAuth
+
+jms_url         = 'https://demo.jumpserver.org'
+AccessKeyID     = 'AccessKeyID'
+AccessKeySecret = 'AccessKeySecret'
+GMT_FORMAT      = '%a, %d %b %Y %H:%M:%S GMT'
+
+def get_auth():
+    signature_headers = ['(request-target)', 'accept', 'date']
+    auth              = HTTPSignatureAuth(key_id=AccessKeyID, secret=AccessKeySecret, algorithm='hmac-sha256', headers=signature_headers)
+    return auth
+
+def get_user_info():
+    url     = jms_url + '/api/v1/users/users/'
+    auth    = get_auth()
+    headers = {
+        'Accept': 'application/json',
+        'Date': datetime.datetime.utcnow().strftime(GMT_FORMAT)
+    }
+
+    response = requests.get(url, auth=auth, headers=headers)
+    print(json.loads(response.text))
+
+get_user_info()
+```
