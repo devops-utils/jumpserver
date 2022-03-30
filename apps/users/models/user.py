@@ -366,7 +366,7 @@ class RoleMixin:
         """
         由于这里用了 cache ，所以不能改成 self.system_roles.filter().exists() 会查询的
         """
-        if not self._is_superuser:
+        if self._is_superuser is not None:
             return self._is_superuser
 
         from rbac.builtin import BuiltinRole
@@ -401,10 +401,12 @@ class RoleMixin:
     def is_staff(self, value):
         pass
 
+    service_account_email_suffix = '@local.domain'
+
     @classmethod
-    def create_service_account(cls, name, comment):
+    def create_service_account(cls, name, email, comment):
         app = cls.objects.create(
-            username=name, name=name, email='{}@local.domain'.format(name),
+            username=name, name=name, email=email,
             comment=comment, is_first_login=False,
             created_by='System', is_service_account=True,
         )
