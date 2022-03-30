@@ -11,6 +11,10 @@ root
 
 ssh admin@49.232.6.131 -p221
 
+cd utils/
+sh build_docker.sh v2.20.1
+v2.20.1
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
