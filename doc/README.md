@@ -51,6 +51,8 @@ cd /opt/jumpserver-installer-v2.20.1
 ```
 
 ```
+https://docs.jumpserver.org/zh/v2.12.0/dev/rest_api/
+
 docker exec -it jms_core /bin/bash
 cd /opt/jumpserver/apps
 python manage.py shell
