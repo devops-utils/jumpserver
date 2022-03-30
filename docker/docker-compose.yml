@@ -1,10 +1,6 @@
 version: '2.4'
 
 services:
-  core:
-    depends_on:
-      marmot-mysql:
-        condition: service_healthy
   marmot-mysql:
     image: jumpserver/mysql:5
     container_name: marmot-mysql
