@@ -16,6 +16,11 @@ sh build_docker.sh v2.20.1
 jumpserver/core:v2.20.1
 sudo docker build -t "jumpserver/core:v2.20.1" .
 
+cd /opt/jumpserver-installer-v2.20.1
+sudo ./jmsctl.sh restart
+
+sudo docker ps
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
