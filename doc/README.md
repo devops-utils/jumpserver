@@ -8,6 +8,9 @@ sudo docker-compose rm marmot-mysql
 
 mysql -h127.0.0.1 -uroot -p -P3311
 root
+
+ssh admin@49.232.6.131 -p221
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
