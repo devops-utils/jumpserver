@@ -14,13 +14,16 @@ ssh admin@49.232.6.131 -p221
 cd utils/
 sh build_docker.sh v2.20.1
 jumpserver/core:v2.20.1
-django-admin.py  compilemessages
+sudo docker-compose -f local.yml run django python manage.py compilemessages
 sudo docker build -t "jumpserver/core:v2.20.1" .
 
 cd /opt/jumpserver-installer-v2.20.1
 sudo ./jmsctl.sh restart
 
 sudo docker run -ti --volume="$(pwd)":/jumpserver --rm jumpserver/core:v2.20.1 bash
+cd /jumpserver
+apt-get update && apt-get install -y gettext
+django-admin.py  compilemessages
 
 sudo docker ps
 

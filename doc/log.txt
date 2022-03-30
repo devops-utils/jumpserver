@@ -531,3 +531,14 @@ da4e61751e0c   jumpserver/lion:v2.20.1                                          
 3306/tcp, 33060/tcp                                                                                                     jms_mysql
 a7bf27e672a2   jumpserver/redis:6-alpine                                                 "docker-entrypoint.s…"   28 minutes ago   Up 28 minutes (healthy)
 6379/tcp                                                                                                                jms_redis
+
+django-admin.py  compilemessages
+CommandError: Can't find msgfmt. Make sure you have GNU gettext tools 0.15 or newer installed.
+
+django-admin.py  compilemessages
+processing file jumpserver-installer.po in /jumpserver/doc/jumpserver-installer-v2.20.1/locale/en/LC_MESSAGES
+processing file jumpserver-installer.po in /jumpserver/doc/jumpserver-installer-v2.20.1/locale/zh_CN/LC_MESSAGES
+processing file django.po in /jumpserver/apps/locale/ja/LC_MESSAGES
+processing file djangojs.po in /jumpserver/apps/locale/ja/LC_MESSAGES
+processing file django.po in /jumpserver/apps/locale/zh/LC_MESSAGES
+processing file djangojs.po in /jumpserver/apps/locale/zh/LC_MESSAGES
