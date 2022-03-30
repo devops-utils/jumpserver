@@ -10,6 +10,11 @@ sudo docker-compose rm marmot-mysql
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
 # 门石 Gate Stone
+
+# Downloading apps/common/utils/geoip/GeoLite2-City.mmdb (74 MB)
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:devops-utils/jumpserver.git
+git lfs fetch
+git lfs pull
 ```
 
 ```shell
