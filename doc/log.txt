@@ -1,0 +1,67 @@
+sudo bash quick_start.sh
+download install script to /opt/jumpserver-installer-v2.20.1 (开始下载安装脚本到 /opt/jumpserver-installer-v2.20.1)
+quick_start.sh: line 58: sedi: command not found
+
+
+       ██╗██╗   ██╗███╗   ███╗██████╗ ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗
+       ██║██║   ██║████╗ ████║██╔══██╗██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+       ██║██║   ██║██╔████╔██║██████╔╝███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
+  ██   ██║██║   ██║██║╚██╔╝██║██╔═══╝ ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
+  ╚█████╔╝╚██████╔╝██║ ╚═╝ ██║██║     ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
+   ╚════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+
+                                                                   Version:  v2.20.1
+
+1. Check Configuration File
+09ce5e93ca58: Pulling fs layer
+
+09ce5e93ca58: Waiting
+
+09ce5e93ca58: Downloading [==================================================>]     412B/412B
+
+09ce5e93ca58: Verifying Checksum
+
+09ce5e93ca58: Download complete
+
+09ce5e93ca58: Extracting [==================================================>]     412B/412B
+
+09ce5e93ca58: Extracting [==================================================>]     412B/412B
+
+Path to Configuration file: /opt/jumpserver/config
+/opt/jumpserver/config/config.txt  [ √ ]
+/opt/jumpserver/config/nginx/cert/server.crt   [ √ ]
+/opt/jumpserver/config/nginx/cert/server.key   [ √ ]
+complete
+
+2. Backup Configuration File
+Back up to /opt/jumpserver/config/backup/config.txt.2022-03-30_16-15-09
+complete
+
+>>> Install and Configure Docker
+1. Install Docker
+complete
+
+2. Configure Docker
+complete
+
+3. Start Docker
+complete
+
+>>> Loading Docker Image
+[jumpserver/redis:6-alpine]
+6-alpine: Pulling from jumpserver/redis
+5843afab3874: Pull complete
+f2c041a97bd6: Pull complete
+2ab181d61f92: Pull complete
+0e735c6f0308: Pull complete
+3494533ff85c: Pull complete
+09ce5e93ca58: Pull complete
+Digest: sha256:8300b885570faad626e569e7b8cfef3407c87050d705ff26e243200cb3f84da8
+Status: Downloaded newer image for jumpserver/redis:6-alpine
+docker.io/jumpserver/redis:6-alpine
+
+[jumpserver/mysql:5]
+5: Pulling from jumpserver/mysql
+Digest: sha256:b3b2703de646600b008cbb2de36b70b21e51e7e93a7fca450d2b08151658b2dd
+Status: Image is up to date for jumpserver/mysql:5
+docker.io/jumpserver/mysql:5
