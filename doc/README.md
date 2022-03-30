@@ -20,6 +20,8 @@ sudo docker build -t "jumpserver/core:v2.20.1" .
 cd /opt/jumpserver-installer-v2.20.1
 sudo ./jmsctl.sh restart
 
+sudo docker run -ti --volume="$(pwd)":/jumpserver --rm jumpserver/core:v2.20.1 bash
+
 sudo docker ps
 
 # 土拨鼠 marmot
