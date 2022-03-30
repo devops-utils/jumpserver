@@ -6,6 +6,8 @@ sudo docker-compose up -d marmot-mysql
 sudo docker-compose stop marmot-mysql
 sudo docker-compose rm marmot-mysql
 
+mysql -h127.0.0.1 -uroot -p -P3311
+root
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
