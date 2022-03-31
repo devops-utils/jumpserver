@@ -32,7 +32,7 @@ git pull
 sudo docker run -ti --volume="$(pwd)":/jumpserver --rm jumpserver/core:v2.20.1 bash
 cd /jumpserver
 apt-get update && apt-get install -y gettext
-django-admin.py  compilemessages
+django-admin.py compilemessages
 git commit --amend
 git reset --soft HEAD^
 
