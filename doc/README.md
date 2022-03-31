@@ -38,6 +38,14 @@ sudo docker ps
 GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:devops-utils/jumpserver.git
 git lfs fetch
 git lfs pull
+
+docker ps|grep geo
+docker stop 3c0c3057b21a
+docker stop 39d04bdd48d9
+cd SliverWorkspace-2.0.375427/bin
+docker-compose down
+docker ps|grep jetbrains
+docker stop 392438bc4e37
 ```
 
 ```shell
