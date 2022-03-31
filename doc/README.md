@@ -47,6 +47,10 @@ cd SliverWorkspace-2.0.375427/bin
 docker-compose down
 docker ps|grep jetbrains
 docker stop 392438bc4e37
+
+http://docs.jumpserver.org/
+http://www.jumpserver.org/support/
+https://jumpserver.org/enterprise.html
 ```
 
 ```shell
