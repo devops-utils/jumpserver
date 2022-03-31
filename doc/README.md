@@ -16,6 +16,7 @@ sh build_docker.sh v2.20.1
 jumpserver/core:v2.20.1
 sudo docker-compose -f local.yml run django python manage.py compilemessages
 sudo docker build -t "jumpserver/core:v2.20.1" .
+sudo docker build -t "jumpserver/web:v2.20.1" .
 
 cd /opt/jumpserver-installer-v2.20.1
 sudo ./jmsctl.sh restart
