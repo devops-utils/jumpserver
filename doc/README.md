@@ -28,6 +28,7 @@ sudo ./jmsctl.sh restart
 sudo ./jmsctl.sh stop
 sudo ./jmsctl.sh start
 
+git pull
 sudo docker run -ti --volume="$(pwd)":/jumpserver --rm jumpserver/core:v2.20.1 bash
 cd /jumpserver
 apt-get update && apt-get install -y gettext
