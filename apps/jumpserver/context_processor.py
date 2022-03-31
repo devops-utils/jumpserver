@@ -14,7 +14,7 @@ default_context = {
     'LOGIN_WECOM_LOGO_URL': static('img/login_wecom_logo.png'),
     'LOGIN_DINGTALK_LOGO_URL': static('img/login_dingtalk_logo.png'),
     'LOGIN_FEISHU_LOGO_URL': static('img/login_feishu_logo.png'),
-    'JMS_TITLE': _('JumpServer Open Source Bastion Host'),
+    'JMS_TITLE': _('MarmotServer'),
 }
 
 default_interface = {

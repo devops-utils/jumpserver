@@ -2629,7 +2629,7 @@ msgid "Your account has been created successfully"
 msgstr "你的账号已创建成功"
 
 #: jumpserver/context_processor.py:17
-msgid "JumpServer Open Source Bastion Host"
+msgid "MarmotServer"
 msgstr "MarmotServer 土拨鼠"
 
 #: jumpserver/views/celery_flower.py:23
