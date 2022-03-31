@@ -17,7 +17,7 @@ jumpserver/core:v2.20.1
 sudo docker-compose -f local.yml run django python manage.py compilemessages
 sudo docker build -t "jumpserver/core:v2.20.1" .
 sudo docker build -t "jumpserver/lina:v2.20.1" .
-sudo docker build -t "jumpserver/web:v2.20.1" .
+sudo docker build -t "jumpserver/web:v2.20.1" -f Dockerfile.web .
 /opt/lina/
 
 sudo docker run -ti jumpserver/lina:v2.20.1 sh
