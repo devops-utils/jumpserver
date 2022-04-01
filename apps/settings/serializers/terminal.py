@@ -35,7 +35,7 @@ class TerminalSettingSerializer(serializers.Serializer):
     )
     TERMINAL_RDP_ADDR = serializers.CharField(
         required=False, label=_("RDP address"), max_length=1024, allow_blank=True,
-        help_text=_('RDP visit address, eg: dev.jumpserver.org:3389')
+        help_text=_('RDP visit address, eg: dev.marmotserver.org:3389')
     )
     XRDP_ENABLED = serializers.BooleanField(label=_("Enable XRDP"))
 
@@ -49,7 +49,7 @@ class TerminalSettingSerializer(serializers.Serializer):
     TERMINAL_MAGNUS_ENABLED = serializers.BooleanField(label=_("Enable database proxy"))
     TERMINAL_MAGNUS_HOST = serializers.CharField(
         required=False, label=_("Database proxy host"), max_length=1024, allow_blank=True,
-        help_text=_('Database proxy host, eg: dev.jumpserver.org')
+        help_text=_('Database proxy host, eg: dev.marmotserver.org')
     )
     TERMINAL_MAGNUS_MYSQL_PORT = serializers.IntegerField(
         required=False, label=_("MySQL port"), default=33060,

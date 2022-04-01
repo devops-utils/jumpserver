@@ -26,7 +26,7 @@ class AnnouncementSerializer(serializers.Serializer):
 class BasicSettingSerializer(serializers.Serializer):
     SITE_URL = serializers.URLField(
         required=True, label=_("Site url"),
-        help_text=_('eg: http://dev.jumpserver.org:8080')
+        help_text=_('eg: http://dev.marmotserver.org:8080')
     )
     USER_GUIDE_URL = serializers.URLField(
         required=False, allow_blank=True, allow_null=True, label=_("User guide url"),

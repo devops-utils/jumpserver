@@ -3543,11 +3543,11 @@ msgstr "ユーザー属性マッピング"
 
 #: settings/serializers/auth/ldap.py:55
 msgid ""
-"User attr map present how to map LDAP user attr to jumpserver, username,name,"
-"email is jumpserver attr"
+"User attr map present how to map LDAP user attr to marmotserver, username,name,"
+"email is marmotserver attr"
 msgstr ""
-"ユーザー属性マッピングは、LDAPのユーザー属性をjumpserverユーザーにマッピング"
-"する方法、username, name,emailはjumpserverのユーザーが必要とする属性です"
+"ユーザー属性マッピングは、LDAPのユーザー属性をmarmotserverユーザーにマッピング"
+"する方法、username, name,emailはmarmotserverのユーザーが必要とする属性です"
 
 #: settings/serializers/auth/ldap.py:70
 msgid "Connect timeout"
@@ -3738,8 +3738,8 @@ msgid "Site url"
 msgstr "サイトURL"
 
 #: settings/serializers/basic.py:29
-msgid "eg: http://dev.jumpserver.org:8080"
-msgstr "例えば: http://dev.jumpserver.org:8080"
+msgid "eg: http://dev.marmotserver.org:8080"
+msgstr "例えば: http://dev.marmotserver.org:8080"
 
 #: settings/serializers/basic.py:32
 msgid "User guide url"
@@ -3904,8 +3904,8 @@ msgstr ""
 "{email}ラベルをサポートします。"
 
 #: settings/serializers/email.py:64
-msgid "Tips: Email signature (eg:jumpserver)"
-msgstr "ヒント: メール署名 (例: jumpserver)"
+msgid "Tips: Email signature (eg:marmotserver)"
+msgstr "ヒント: メール署名 (例: marmotserver)"
 
 #: settings/serializers/other.py:7
 msgid "Email suffix"
@@ -3957,16 +3957,16 @@ msgid "Help Docs URL"
 msgstr "ドキュメントリンク"
 
 #: settings/serializers/other.py:35
-msgid "default: http://docs.jumpserver.org"
-msgstr "デフォルト: http://docs.jumpserver.org"
+msgid "default: http://docs.marmotserver.org"
+msgstr "デフォルト: http://docs.marmotserver.org"
 
 #: settings/serializers/other.py:39
 msgid "Help Support URL"
 msgstr "サポートリンク"
 
 #: settings/serializers/other.py:40
-msgid "default: http://www.jumpserver.org/support/"
-msgstr "デフォルト: http://www.jumpserver.org/support/"
+msgid "default: http://www.marmotserver.org/support/"
+msgstr "デフォルト: http://www.marmotserver.org/support/"
 
 #: settings/serializers/security.py:10
 msgid "Password minimum length"
@@ -4261,8 +4261,8 @@ msgid "RDP address"
 msgstr "RDPアドレス"
 
 #: settings/serializers/terminal.py:38
-msgid "RDP visit address, eg: dev.jumpserver.org:3389"
-msgstr "RDP訪問先住所、例: dev.jumpserver.org:3389"
+msgid "RDP visit address, eg: dev.marmotserver.org:3389"
+msgstr "RDP訪問先住所、例: dev.marmotserver.org:3389"
 
 #: settings/serializers/terminal.py:40
 msgid "Enable XRDP"
@@ -4285,8 +4285,8 @@ msgid "Database proxy host"
 msgstr "データベースエージェントホスト"
 
 #: settings/serializers/terminal.py:48
-msgid "Database proxy host, eg: dev.jumpserver.org"
-msgstr "RDP訪問先住所、例: dev.jumpserver.org:3389"
+msgid "Database proxy host, eg: dev.marmotserver.org"
+msgstr "RDP訪問先住所、例: dev.marmotserver.org:3389"
 
 #: settings/serializers/terminal.py:51
 msgid "MySQL port"
@@ -6057,7 +6057,7 @@ msgid "First Login"
 msgstr "最初のログイン"
 
 #: users/templates/users/first_login_done.html:31
-msgid "Welcome to use jumpserver, visit "
+msgid "Welcome to use marmotserver, visit "
 msgstr "MarmotServer砦機へようこそ"
 
 #: users/templates/users/first_login_done.html:32

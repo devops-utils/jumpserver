@@ -53,7 +53,7 @@ class LDAPSettingSerializer(serializers.Serializer):
     AUTH_LDAP_USER_ATTR_MAP = serializers.DictField(
         required=True, label=_('User attr map'),
         help_text=_('User attr map present how to map LDAP user attr to '
-                    'jumpserver, username,name,email is jumpserver attr')
+                    'marmotserver, username,name,email is marmotserver attr')
     )
     AUTH_LDAP_SYNC_IS_PERIODIC = serializers.BooleanField(
         required=False, label=_('Periodic perform')

@@ -32,12 +32,12 @@ class OtherSettingSerializer(serializers.Serializer):
 
     HELP_DOCUMENT_URL = serializers.URLField(
         required=False, allow_blank=True, allow_null=True, label=_("Help Docs URL"),
-        help_text=_('default: http://docs.jumpserver.org')
+        help_text=_('default: http://docs.marmotserver.org')
     )
 
     HELP_SUPPORT_URL = serializers.URLField(
         required=False, allow_blank=True, allow_null=True, label=_("Help Support URL"),
-        help_text=_('default: http://www.jumpserver.org/support/')
+        help_text=_('default: http://www.marmotserver.org/support/')
     )
 
     # 准备废弃

@@ -61,5 +61,5 @@ class EmailContentSettingSerializer(serializers.Serializer):
     )
     EMAIL_CUSTOM_USER_CREATED_SIGNATURE = serializers.CharField(
         max_length=512, allow_blank=True, required=False, label=_('Signature'),
-        help_text=_('Tips: Email signature (eg:jumpserver)')
+        help_text=_('Tips: Email signature (eg:marmotserver)')
     )
