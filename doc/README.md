@@ -59,6 +59,7 @@ docker stop 392438bc4e37
 http://docs.jumpserver.org/
 http://www.jumpserver.org/support/
 https://jumpserver.org/enterprise.html
+https://docs.jumpserver.org/zh/master/faq/other/#3-web
 ```
 
 ```shell
