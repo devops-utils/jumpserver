@@ -48,11 +48,18 @@ u = User.objects.get(username='test')
 u.private_token
 # Out[4]: <PrivateToken: 6ad99c651ffdc792859e35844d6a5e15126133cd>
 
-curl https://marmot.7otech.com/api/v1/users/users/ \
+# https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&display=1&draw=1
+
+curl 'https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&display=1&draw=1' \
      -H 'Authorization: Token 6ad99c651ffdc792859e35844d6a5e15126133cd' \
      -H 'Content-Type: application/json' \
      -H 'X-JMS-ORG: 00000000-0000-0000-0000-000000000002'
-     
+
+curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Token 6ad99c651ffdc792859e35844d6a5e15126133cd" \
+  -d '{"username": "test", "next": "/luna/"}'
+  
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
