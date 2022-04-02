@@ -66,6 +66,16 @@ curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
   -H "Authorization: Token fbb421373dcdc2f43ea76877f8ca0e279eaf584c" \
   -d '{"username": "test", "next": "/luna/"}'
   
+koko/elfinder/sftp/#elf_13d923be4e45994febd3beffff285649_L0RlZmF1bHQvZ2Vub21lL3poYW5ncC9kYXRh
+
+curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
+  -H 'Content-Type: application/json' \
+  -H "Authorization: Token fbb421373dcdc2f43ea76877f8ca0e279eaf584c" \
+  -d '{"username": "test", "next": "/koko/elfinder/sftp/#elf_13d923be4e45994febd3beffff285649_L0RlZmF1bHQvZ2Vub21lL3poYW5ncC9kYXRh"}'
+
+php -r 'echo base64_decode("L0RlZmF1bHQvZ2Vub21l");'
+/Default/genome
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
