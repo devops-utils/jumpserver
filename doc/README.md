@@ -48,6 +48,12 @@ u = User.objects.get(username='test')
 u.private_token
 # Out[4]: <PrivateToken: 6ad99c651ffdc792859e35844d6a5e15126133cd>
 
+u = User.objects.get(username='admin')
+# u.create_private_token()
+# Out[3]: <PrivateToken: fbb421373dcdc2f43ea76877f8ca0e279eaf584c>
+u.private_token
+# Out[4]: <PrivateToken: fbb421373dcdc2f43ea76877f8ca0e279eaf584c>
+
 # https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&display=1&draw=1
 
 curl 'https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&display=1&draw=1' \
@@ -57,7 +63,7 @@ curl 'https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&dis
 
 curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
   -H 'Content-Type: application/json' \
-  -H "Authorization: Token 6ad99c651ffdc792859e35844d6a5e15126133cd" \
+  -H "Authorization: Token fbb421373dcdc2f43ea76877f8ca0e279eaf584c" \
   -d '{"username": "test", "next": "/luna/"}'
   
 # 土拨鼠 marmot
