@@ -61,7 +61,7 @@ curl 'https://marmot.7otech.com/api/v1/perms/users/assets/?offset=0&limit=15&dis
      -H 'Content-Type: application/json' \
      -H 'X-JMS-ORG: 00000000-0000-0000-0000-000000000002'
 
-curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
+curl -v -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
   -H 'Content-Type: application/json' \
   -H "Authorization: Token fbb421373dcdc2f43ea76877f8ca0e279eaf584c" \
   -d '{"username": "test", "next": "/luna/"}'
