@@ -78,6 +78,11 @@ curl -X POST https://marmot.7otech.com/api/v1/authentication/sso/login-url/ \
 php -r 'echo base64_decode("L0RlZmF1bHQvZ2Vub21l");'
 /Default/genome
 
+saml2
+openssl genrsa -out server.key 2048
+openssl req -new -x509 -days 3650 -key server.key -out server.crt
+openssl req -new -x509 -days 3650 -key server.key -out server.crt -subj "/C=CN/ST=Beijing/L=Beijing/O=yunqiic/OU=yunqiic/CN=7otech.com"  # 这个是证书
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
