@@ -92,6 +92,7 @@ docker run -d --name postgres --net keycloak-network -e POSTGRES_DB=keycloak -e 
 docker run --name keycloak --net keycloak-network jboss/keycloak
 
 http://49.232.6.131:8072/admin
+https://www.jianshu.com/p/a845cc38abe2
 
 https://marmot.7otech.com/core/auth/login
 https://marmot.7otech.com/core/auth/saml2/metadata/ 
