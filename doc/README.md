@@ -84,6 +84,14 @@ openssl req -new -x509 -days 3650 -key server.key -out server.crt
 openssl req -new -x509 -days 3650 -key server.key -out server.crt -subj "/C=CN/ST=Beijing/L=Beijing/O=yunqiic/OU=yunqiic/CN=7otech.com"  # 这个是证书
 
 sudo docker run quay.io/keycloak/keycloak start-dev
+sudo docker run -p 8072:8080 quay.io/keycloak/keycloak start-dev
+http://www.keycloak.org/
+docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD='welcome1' -p 8080:8080 jboss/keycloak
+docker network create keycloak-network
+docker run -d --name postgres --net keycloak-network -e POSTGRES_DB=keycloak -e POSTGRES_USER=keycloak -e POSTGRES_PASSWORD=password postgres
+docker run --name keycloak --net keycloak-network jboss/keycloak
+
+http://49.232.6.131:8072/admin
 
 https://marmot.7otech.com/core/auth/login
 https://marmot.7otech.com/core/auth/saml2/metadata/ 
