@@ -83,6 +83,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -x509 -days 3650 -key server.key -out server.crt
 openssl req -new -x509 -days 3650 -key server.key -out server.crt -subj "/C=CN/ST=Beijing/L=Beijing/O=yunqiic/OU=yunqiic/CN=7otech.com"  # 这个是证书
 
+https://marmot.7otech.com/core/auth/login
 https://marmot.7otech.com/core/auth/saml2/metadata/ 
 keycloak
 
