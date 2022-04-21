@@ -86,13 +86,38 @@ openssl req -new -x509 -days 3650 -key server.key -out server.crt
 openssl req -new -x509 -days 3650 -key server.key -out server.crt -subj "/C=CN/ST=Beijing/L=Beijing/O=yunqiic/OU=yunqiic/CN=7otech.com"  # 这个是证书
 
 sudo docker run -p 8072:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:17.0.1 start-dev
+
+docker exec -it keycloak bash
+cd keycloak/bin
+./kcadm.sh config credentials --server http://<droplet IP>:8080/auth --realm master --user admin --password {password with upcase etc.}
+./kcadm.sh update realms/master -s sslRequired=NONE
+
+cd git/keycloak
+openssl req -newkey rsa:2048 -nodes \
+  -keyout server.key.pem -x509 -days 3650 -out server.crt.pem
+chmod 755 server.key.pem
+
+sudo docker run \
+  --name keycloak \
+  -e KEYCLOAK_ADMIN=admin \
+  -e KEYCLOAK_ADMIN_PASSWORD=admin \
+  -e KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/server.crt.pem \
+  -e KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/server.key.pem \
+  -v $PWD/server.crt.pem:/opt/keycloak/conf/server.crt.pem \
+  -v $PWD/server.key.pem:/opt/keycloak/conf/server.key.pem \
+  -p 8072:8443 \
+  quay.io/keycloak/keycloak:17.0.1 \
+  start-dev
+
 http://www.keycloak.org/
 docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD='welcome1' -p 8080:8080 jboss/keycloak
 docker network create keycloak-network
 docker run -d --name postgres --net keycloak-network -e POSTGRES_DB=keycloak -e POSTGRES_USER=keycloak -e POSTGRES_PASSWORD=password postgres
 docker run --name keycloak --net keycloak-network jboss/keycloak
 
+http://49.232.6.131:8072
 http://49.232.6.131:8072/admin
+https://sso-test.7otech.com
 https://www.jianshu.com/p/a845cc38abe2
 
 https://marmot.7otech.com/core/auth/login
