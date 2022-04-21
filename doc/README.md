@@ -85,8 +85,7 @@ openssl genrsa -out server.key 2048
 openssl req -new -x509 -days 3650 -key server.key -out server.crt
 openssl req -new -x509 -days 3650 -key server.key -out server.crt -subj "/C=CN/ST=Beijing/L=Beijing/O=yunqiic/OU=yunqiic/CN=7otech.com"  # 这个是证书
 
-sudo docker run quay.io/keycloak/keycloak start-dev
-sudo docker run -p 8072:8080 quay.io/keycloak/keycloak start-dev
+sudo docker run -p 8072:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:17.0.1 start-dev
 http://www.keycloak.org/
 docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD='welcome1' -p 8080:8080 jboss/keycloak
 docker network create keycloak-network
