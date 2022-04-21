@@ -109,6 +109,9 @@ sudo docker run \
   quay.io/keycloak/keycloak:17.0.1 \
   start-dev
 
+docker start 988f9efa76bc
+docker stop 988f9efa76bc
+
 http://www.keycloak.org/
 docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD='welcome1' -p 8080:8080 jboss/keycloak
 docker network create keycloak-network
