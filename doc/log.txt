@@ -567,3 +567,32 @@ processing file djangojs.po in /jumpserver/apps/locale/zh/LC_MESSAGES
 <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso-test.7otech.com/realms/test/protocol/saml"/>
 </md:IDPSSODescriptor>
 </md:EntityDescriptor>
+
+https://sso-test.7otech.com/realms/test/protocol/saml?SAMLRequest=lVNNj9owEL3vr4hyByehkK0FSBT6QUUhAtpDL5VxhsWqP1J7skv%2Ffe0AC0irSM0lyfi9NzNvxkPHlKzopMaDXsOfGhw%2BRNFRSe1oczSKa6upYU44qpkCR5HTzeTbgmbdhFbWoOFGxnekdg5zDiwKowNpPhvFq%2BXHxerzfPkrTfr7rJ%2F30jIfvO%2BnWQrJI8vyLOnlg9x%2F73c86%2FfgMRB%2FgHVeYxR7yfAfRYU1z6IEu%2FQZR%2FHXWlUbsM9gmzTO1TDXDplGT0myrJO862TpNhnQNKVp%2F2dAzXz3QjNsdA%2BIlaOEOGc66A%2B6uUHghy43ilhgUjkSwuRiAQmdB5XiHPggdCn0U7sZuxPI0S%2FbbdEpVpttkJhcLJoa7WoFNnQiOHxfL66FKWaVuSuLcGOBMD%2FLppiMcCbljvHf5OTQBNGKXY1wkvV5z7pzXcJxFKfxuMENA5s2ntnxf6ST5kloMiS39KtgRcNk5rPCSMH%2FNvHwfDJWMWx3KURE2dk3UFqF0TsEjfGrykRK8zL1c0E%2Fe7Q1xBG5y31ebiibVfcGIBwxmhpVMStcGDgcGcezA1cXbuFT6Xd3Dftx63pzygPOhwv%2FejG2DBsB3OfeWqZdZSyePXpT%2FFQ1aSl7%2FHA5vr23438%3D&RelayState=%2F
+
+<md:EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="https://sso-test.7otech.com/realms/test_saml2">
+<md:IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<md:KeyDescriptor use="signing">
+<ds:KeyInfo>
+<ds:KeyName>Agk5llVferqPcIQNZ3GQo_oJzt3xLZyzI_IpXsTjeBI</ds:KeyName>
+<ds:X509Data>
+<ds:X509Certificate>MIICozCCAYsCBgGASsUcqzANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDDAp0ZXN0X3NhbWwyMB4XDTIyMDQyMTA2MTYxM1oXDTMyMDQyMTA2MTc1M1owFTETMBEGA1UEAwwKdGVzdF9zYW1sMjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKqwzN9JymG9FrZo92vyGsDbZKK0oXiz5b253obBpI0+NM/8QSTVudM2+BrswXdThIqxJq5D4xssEgYD9wCNsEY5BBGHiOZg+/R0K6O5CgUrzREQXRkmfOXXKvIHVtHs5hnjema8EbIKe8if/IkSrgoYwBD65FDBHQip27R3nPlZG1fgIQoC2TZ0ZrS7jfg06rzo1Vktb9f8UFPEFYxg5UtrJ1J+OKwL/3koVBxvMa/V3ndc2YN8Q84aXAk6J6/XT63RHpzMIUXKvVi2twncSXZbf+dPKok2mqGmdO7hZAhhNLSABCfsGjABAEeknjHc1u8M1CXF+y7Hf8aMTVO/iHsCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEARdYr1CnEkPMW8CS4Dj1kbNtXOBqFLQKUtQxT9rmRZUCSFKGRigZOgXP7gaOlcUSsNyeEZSycpLn+keL7fkNn3pVejuL2D5Zx5RoorUvTkeLBQnzHEnsWesyZKP5KDF2yjCvi+pRBdNygpnp6FqKkZUTi2hwIG++h1il53COtPToL+wdBb2h4l/i/AY/fZfLwRS28iRBVSDQ8SeZ0Du8cp5FoGjUj5H/t+4aKbteQ4ZN8whuhzLpP8BFsqgcncv7lI3w3N/mOCyFUU7UmiER8wQWTF/hjXIFU2Vs02cq2dkckWL/alRJdVMc3jtepxYzP3tChrS+F/nsS2pffH3rkjQ==</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+</md:KeyDescriptor>
+<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml/resolve" index="0"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sso-test.7otech.com/realms/test_saml2/protocol/saml"/>
+</md:IDPSSODescriptor>
+</md:EntityDescriptor>
+
+https://sso-test.7otech.com/realms/test_saml2/protocol/saml?SAMLRequest=lVNNj9owEL3vr4hyByfZZRcsQKLQDyoWIqA99LJy7GGxGtupPdml%2F752AgWkCqm5WB7PezPz5mXomCorOqlxr9fwqwaHd1F0UKV2tHkaxbXV1DAnHdVMgaPI6WbyvKBZN6GVNWi4KeMr0G0Mcw4sSqMDaD4bxavlx8Xq83z58sCKXb%2BfFGnWL3ZPQqQAyb0YFH0xuH8USTroQ1r0WBqA38E6zzGKPWW4R1FuzZsUYJe%2B4ij%2BWqtqA%2FYNbFPGuRrm2iHT6CFJlnWSh06WbpNHmiW01%2FsRsmZ%2BeqkZNrx7xMpRQpwzHfQP3SeDwPddbhSxwErlSAi%2FhIEzchKChGvgyo%2BBD1ILqV9vS1K0SY5%2B2W7zTr7abAPF5CTU1GhXK7BhHsnh23pxbk8xq8xVc4QbC4T5jZK2N87KsmD8J2l1miBaWdQILa2ve%2BSdawGHUZzG4yZvGNC0Uc6O%2F6NcaV6lJkNyCT8TVjTsZz7LTSn57yYevk%2FGKoa3VQoRKTq7JpVWwQAOQWP8l2VSluZ96reD3gFoa4gjclX7aHEQjeG9AAgHjKZGVcxKF9YOB8bxqMBZhcv0aekdvIbd%2BKbJOeUhz4dzf7wbK4IjgPvaW8u0q4zFo0b%2FJG%2B7JjfaHt%2Bdni%2F%2F3vEf&RelayState=%2F
