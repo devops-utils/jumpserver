@@ -139,6 +139,8 @@ keycloak
   "security": {}
 }
 
+sudo docker run -d --name=zeus -p 8072:8082 -v $pwd/zeus:/data bullteam/zeus-admin:latest
+
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
 # 基石 footstone
