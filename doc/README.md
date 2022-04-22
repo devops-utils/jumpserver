@@ -139,7 +139,8 @@ keycloak
   "security": {}
 }
 
-sudo docker run -d --name=zeus -p 8072:8082 -v $pwd/zeus:/data bullteam/zeus-admin:latest
+sudo docker run -d --name=zeus -p 8072:80 -v $pwd/zeus:/data bullteam/zeus-admin:latest
+http://49.232.6.131:8072
 
 # 土拨鼠 marmot
 # 土拨鼠堡垒 marmot-fort
